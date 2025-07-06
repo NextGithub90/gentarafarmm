@@ -115,7 +115,7 @@ section {
 
 /* Hero Section Enhancements */
 .hero-content h1 {
-  animation: slideInFromLeft 1.2s ease-out;
+  animation: slideInFromLeft 1.3s ease-out;
 }
 
 .hero-content p {
