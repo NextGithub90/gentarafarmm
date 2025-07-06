@@ -119,28 +119,34 @@
                 <p class="text-lg">At our factory, we take pride in turning the best Indonesian cocoa and coffee into
                     top-high quality products. Count on us to meet all your global needs with quality you can trust!</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-green-800 p-8 rounded-lg">
-                    <h3 class="text-2xl font-bold mb-4">GreenCocoa Cocoa Factory</h3>
-                    <p class="mb-4">Located in West Java, Indonesia, we focus on COCOA POWDER production. With
-                        production capacity up to 800 metric tons/month, we can supply Alkalized Cocoa Powder, Natural
-                        Cocoa Powder, and Hot Chocolate Mix for your business.</p>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li>Advanced processing technology</li>
-                        <li>Strict quality control</li>
-                        <li>Sustainable production methods</li>
-                    </ul>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="w-full md:w-1/2 mb-4 md:mb-0">
+                    <img src="images/pabrik1.jpg" alt="GreenCocoa Factory" class="w-full h-96 object-cover rounded-lg shadow-xl">
                 </div>
-                <div class="bg-green-800 p-8 rounded-lg">
-                    <h3 class="text-2xl font-bold mb-4">GreenCocoa Coffee Factory</h3>
-                    <p class="mb-4">Located in Banten, Indonesia, we produce Arabica and Robusta roasted coffee beans
-                        from more than 20 origins all over the world. We also produce instant coffee, supplying green
-                        beans, and help coffee shops around the world get the best coffee from Indonesia!</p>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li>State-of-the-art roasting equipment</li>
-                        <li>Expert coffee roasters</li>
-                        <li>Diverse coffee bean selection</li>
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-4">GreenCocoa Factory</h3>
+                    <p class="mb-6">Located in West Java, Indonesia, we focus on producing high-quality Cocoa Powder and Coffee products. With production capacity up to 800 metric tons/month, we can supply various products including:</p>
+                    <ul class="list-disc pl-5 space-y-3 mb-6">
+                        <li>Alkalized Cocoa Powder</li>
+                        <li>Natural Cocoa Powder</li>
+                        <li>Hot Chocolate Mix</li>
+                        <li>Premium Coffee Beans</li>
+                        <li>Instant Coffee Products</li>
                     </ul>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-green-300"></i>
+                            <span>Advanced processing technology</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-green-300"></i>
+                            <span>Strict quality control</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-green-300"></i>
+                            <span>Sustainable production methods</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -245,40 +251,66 @@
                 <h3 class="text-2xl font-bold mb-6 border-b border-green-700 pb-2">Coffee Products</h3>
                 <p class="mb-8 text-lg">We offer you high quality coffee products, produced from the best Arabica and
                     Robusta Indonesian coffee beans.</p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-green-800 p-6 rounded-lg text-center">
-                        <img src="images/fullwas.png" alt="Arabica Coffee"
-                            class="w-full h-48 object-cover rounded-lg mb-4">
-                        <h4 class="text-xl font-bold mb-2">fullwash Coffee</h4>
+                <!-- Coffee Products Slider Start -->
+                <div id="coffeeProductsCarousel" class="carousel slide mb-8"
+                    style="display: flex; justify-content: center;" data-bs-ride="carousel">
+                    <div class="carousel-inner" style="width: 500px;">
+                        <div class="carousel-item active">
+                            <div class="bg-green-800 p-6 rounded-lg text-center">
+                                <img src="images/fullwas.png" alt="fullwash Coffee"
+                                    class="w-full h-50 object-cover rounded-lg mb-4 mx-auto">
+                                <h4 class="text-xl font-bold mb-2">fullwash Coffee</h4>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="bg-green-800 p-6 rounded-lg text-center">
+                                <img src="images/arabica.coffe.png" alt="semiwash Coffee"
+                                    class="w-full h-50 object-cover rounded-lg mb-4 mx-auto">
+                                <h4 class="text-xl font-bold mb-2">semiwash Coffee</h4>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="bg-green-800 p-6 rounded-lg text-center">
+                                <img src="images/naturalCoffe.png" alt="natural Coffee"
+                                    class="w-full h-50 object-cover rounded-lg mb-4 mx-auto">
+                                <h4 class="text-xl font-bold mb-2">natural Coffee</h4>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="bg-green-800 p-6 rounded-lg text-center">
+                                <img src="images/winey.png" alt="winey Coffee"
+                                    class="w-full h-50 object-cover rounded-lg mb-4 mx-auto">
+                                <h4 class="text-xl font-bold mb-2">winey Coffee</h4>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="bg-green-800 p-6 rounded-lg text-center">
+                                <img src="images/robusta.coffe.png" alt="Robusta Coffee"
+                                    class="w-full h-50 object-cover rounded-lg mb-4 mx-auto">
+                                <h4 class="text-xl font-bold mb-2">Robusta Coffee</h4>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="bg-green-800 p-6 rounded-lg text-center">
+                                <img src="images/liberikacoffe.png" alt="liberika Coffee"
+                                    class="w-full h-50 object-cover rounded-lg mb-4 mx-auto">
+                                <h4 class="text-xl font-bold mb-2">liberika Coffee</h4>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-green-800 p-6 rounded-lg text-center">
-                        <img src="images/arabica.coffe.png" alt="Arabica Coffee"
-                            class="w-full h-48 object-cover rounded-lg mb-4">
-                        <h4 class="text-xl font-bold mb-2">semiwash Coffee</h4>
-                    </div>
-                    <div class="bg-green-800 p-6 rounded-lg text-center">
-                        <img src="images/naturalCoffe.png" alt="Arabica Coffee"
-                            class="w-full h-48 object-cover rounded-lg mb-4">
-                        <h4 class="text-xl font-bold mb-2">natural Coffee</h4>
-                    </div>
-                    <div class="bg-green-800 p-6 rounded-lg text-center">
-                        <img src="images/winey.png" alt="Arabica Coffee"
-                            class="w-full h-48 object-cover rounded-lg mb-4">
-                        <h4 class="text-xl font-bold mb-2">winey Coffee</h4>
-                    </div>
-                    <div class="bg-green-800 p-6 rounded-lg text-center">
-                        <img src="images/robusta.coffe.png" alt="Robusta Coffee"
-                            class="w-full h-48 object-cover rounded-lg mb-4">
-                        <h4 class="text-xl font-bold mb-2">Robusta Coffee</h4>
-                    </div>
-                    <div class="bg-green-800 p-6 rounded-lg text-center">
-                        <img src="images/liberikacoffe.png" alt="Instant Coffee"
-                            class="w-full h-48 object-cover rounded-lg mb-4">
-                        <h4 class="text-xl font-bold mb-2">liberika Coffee</h4>
-                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#coffeeProductsCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#coffeeProductsCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
+                <!-- Coffee Products Slider End -->
                 <div class="download w-100" style="text-align: center; margin: 1rem 1rem;">
-
                     <a href="#contact"
                         class="inline-block badge bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition duration-300">Download
                         Catalog</a>
