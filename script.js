@@ -266,4 +266,128 @@ document.addEventListener("DOMContentLoaded", function () {
       whatsappFloat.classList.remove("show");
     }
   });
+
+  // Scroll Reveal Animation
+  function reveal() {
+    const reveals = document.querySelectorAll("section");
+
+    reveals.forEach((reveal) => {
+      const windowHeight = window.innerHeight;
+      const revealTop = reveal.getBoundingClientRect().top;
+      const revealPoint = 150;
+
+      if (revealTop < windowHeight - revealPoint) {
+        reveal.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", reveal);
+  reveal(); // Initial check
+
+  // Smooth Scroll for Navigation Links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth",
+        });
+        // Close mobile menu if open
+        mobileMenu.classList.add("hidden");
+      }
+    });
+  });
+
+  // Stats Counter Animation
+  const counters = document.querySelectorAll(".text-5xl");
+  counters.forEach((counter) => {
+    const target = parseInt(counter.innerText);
+    let count = 0;
+    const speed = 2000 / target;
+
+    function updateCount() {
+      if (count < target) {
+        count++;
+        counter.innerText = count + (counter.innerText.includes("+") ? "+" : "");
+        setTimeout(updateCount, speed);
+      }
+    }
+
+    // Start counter when element is in view
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        updateCount();
+        observer.unobserve(counter);
+      }
+    });
+
+    observer.observe(counter);
+  });
+
+  // Enhanced Carousel Controls
+  const carousel = document.querySelector("#coffeeProductsCarousel");
+  if (carousel) {
+    const carouselItems = carousel.querySelectorAll(".carousel-item");
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    carousel.addEventListener("touchstart", (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+
+    carousel.addEventListener("touchend", (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    });
+
+    function handleSwipe() {
+      const swipeThreshold = 50;
+      if (touchEndX < touchStartX - swipeThreshold) {
+        // Swipe left - next slide
+        bootstrap.Carousel.getInstance(carousel).next();
+      }
+      if (touchEndX > touchStartX + swipeThreshold) {
+        // Swipe right - previous slide
+        bootstrap.Carousel.getInstance(carousel).prev();
+      }
+    }
+  }
+
+  // Form Validation and Animation
+  const form = document.querySelector("form");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Add loading state
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerText;
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+      // Simulate form submission (replace with actual form submission)
+      setTimeout(() => {
+        submitBtn.innerHTML = '<i class="fas fa-check"></i> Sent!';
+        submitBtn.classList.add("bg-green-700");
+
+        // Reset form
+        setTimeout(() => {
+          form.reset();
+          submitBtn.innerText = originalText;
+          submitBtn.classList.remove("bg-green-700");
+        }, 2000);
+      }, 1500);
+    });
+  }
+
+  // Add certification icons animation class
+  document.querySelectorAll(".bg-white img").forEach((img) => {
+    img.classList.add("certification-icon");
+  });
+
+  // Add social icons animation class
+  document.querySelectorAll(".fab").forEach((icon) => {
+    icon.parentElement.classList.add("social-icon");
+  });
 });

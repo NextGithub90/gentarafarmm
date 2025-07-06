@@ -85,6 +85,29 @@ html {
   }
 }
 
+/* Enhanced Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 /* Apply animations to sections */
 section {
   animation: fadeIn 1s ease-out;
@@ -150,6 +173,35 @@ section {
   transform: translateY(1px);
 }
 
+/* Enhanced Download Button */
+.download-btn {
+    background: linear-gradient(45deg, #166534, #15803d);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(21, 128, 61, 0.3);
+    background: linear-gradient(45deg, #15803d, #166534);
+}
+
+.download-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: 0.5s;
+}
+
+.download-btn:hover::before {
+    left: 100%;
+}
+
 /* Card Hover Effects */
 .card {
   transition: all 0.3s ease;
@@ -158,6 +210,17 @@ section {
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced Card Hover Effects */
+.bg-green-800 {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bg-green-800:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(145deg, #166534, #15803d);
 }
 
 /* Image Hover Effects */
@@ -171,6 +234,15 @@ section {
 
 .img-hover:hover img {
   transform: scale(1.05);
+}
+
+/* Enhanced Image Hover Effects */
+.rounded-lg img {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.rounded-lg:hover img {
+    transform: scale(1.05);
 }
 
 /* Custom Form Styling */
@@ -201,6 +273,16 @@ footer a:hover {
   font-size: 2.5rem;
   font-weight: bold;
   color: var(--primary-color);
+}
+
+/* Enhanced Stats Numbers */
+.text-5xl {
+    transition: all 0.3s ease;
+}
+
+.text-5xl:hover {
+    color: #15803d;
+    transform: scale(1.1);
 }
 
 /* Responsive Adjustments */
@@ -327,6 +409,33 @@ footer a:hover {
   transform: scale(1.05);
 }
 
+/* Enhanced Gallery Images */
+.gallery-image {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.gallery-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(21, 128, 61, 0.2);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.gallery-image:hover::after {
+    opacity: 1;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
 /* Contact Form Styling */
 .contact-form input,
 .contact-form textarea {
@@ -351,6 +460,13 @@ footer a:hover {
   transform: translateY(-2px);
 }
 
+/* Enhanced Navigation Links */
+.hover\:text-green-300:hover {
+    color: #86efac !important;
+    text-shadow: 0 0 10px rgba(134, 239, 172, 0.3);
+    transform: translateY(-1px);
+}
+
 /* Social Media Icons */
 .social-icon {
   display: inline-flex;
@@ -367,6 +483,16 @@ footer a:hover {
 .social-icon:hover {
   background-color: var(--primary-dark);
   transform: translateY(-3px);
+}
+
+/* Enhanced Social Media Icons */
+.social-icon {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon:hover {
+    transform: translateY(-3px) rotate(8deg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Custom Badge */
@@ -476,4 +602,58 @@ footer a:hover {
 .whatsapp-float.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Scroll Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Enhanced Certification Icons */
+.certification-icon {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: grayscale(20%);
+}
+
+.certification-icon:hover {
+    transform: scale(1.1) rotate(5deg);
+    filter: grayscale(0%);
+}
+
+/* What Makes Us Different Cards Hover Effect */
+.bg-white.p-6.rounded-lg.shadow-md.flex {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bg-white.p-6.rounded-lg.shadow-md.flex:hover {
+    background: linear-gradient(145deg, #166534, #15803d);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.bg-white.p-6.rounded-lg.shadow-md.flex:hover .text-green-600 {
+    color: #ffffff;
+}
+
+.bg-white.p-6.rounded-lg.shadow-md.flex:hover h3 {
+    color: #ffffff;
+    font-weight: 700;
+    transform: scale(1.05);
+}
+
+.bg-white.p-6.rounded-lg.shadow-md.flex:hover p {
+    color: #e5e7eb;
+}
+
+.bg-white.p-6.rounded-lg.shadow-md.flex h3,
+.bg-white.p-6.rounded-lg.shadow-md.flex p,
+.bg-white.p-6.rounded-lg.shadow-md.flex .text-green-600 {
+    transition: all 0.4s ease;
 }
