@@ -1,0 +1,446 @@
+/* Custom CSS for GreenCocoa Website */
+
+/* General Styles */
+:root {
+  --primary-color: #1b4d3e; /* Hijau Tua */
+  --accent-color: #f4c542; /* Kuning Mustard */
+  --earth-color: #8b5e3c; /* Cokelat Tanah */
+  --neutral-color: #f5f1e3; /* Cream Natural */
+  --text-dark: #1b4d3e;
+  --text-light: #f5f1e3;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+a {
+  color: #ffff;
+  text-decoration: none;
+}
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply animations to sections */
+section {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Hero Section Enhancements */
+.hero-content h1 {
+  animation: slideInFromLeft 1.2s ease-out;
+}
+
+.hero-content p {
+  animation: slideInFromLeft 1.4s ease-out;
+}
+
+.hero-content .btn {
+  animation: slideInFromLeft 1.6s ease-out;
+}
+
+/* Button Hover Effects */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Hover Effects */
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Hover Effects */
+.img-hover {
+  overflow: hidden;
+}
+
+.img-hover img {
+  transition: transform 0.5s ease;
+}
+
+.img-hover:hover img {
+  transform: scale(1.05);
+}
+
+/* Custom Form Styling */
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(22, 101, 52, 0.25);
+}
+
+/* Custom Navbar Styling */
+.navbar {
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: var(--primary-darker) !important;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styling */
+footer a:hover {
+  color: var(--primary-light) !important;
+}
+
+/* Stats Counter Animation */
+.counter-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+  .text-b {
+    font-size: 1.9rem;
+  }
+  .text-k {
+    font-size: 0.9rem !important;
+  }
+  .text-3xl {
+    line-height: 1.25rem !important;
+  }
+
+  h2 {
+    font-size: 2rem !important;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .section-padding {
+    padding: 3rem 0;
+  }
+}
+
+/* Custom Utility Classes */
+.text-primary-custom {
+  color: var(--primary-color) !important;
+}
+
+.bg-primary-custom {
+  background-color: var(--primary-color) !important;
+}
+
+.bg-primary-light {
+  background-color: var(--primary-lighter) !important;
+}
+
+.border-primary {
+  border-color: var(--primary-color) !important;
+}
+
+/* Additional Hover Effects */
+.hover-grow {
+  transition: transform 0.3s ease;
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
+}
+
+.hover-shadow {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom List Styling */
+.custom-list {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+.custom-list li {
+  position: relative;
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.custom-list li:before {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: -1.5rem;
+  color: var(--primary-color);
+}
+
+/* Testimonial Card Styling */
+.testimonial-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.testimonial-card:before {
+  content: "\f10d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.5rem;
+  color: rgba(22, 101, 52, 0.1);
+}
+
+/* Product Card Styling */
+.product-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Contact Form Styling */
+.contact-form input,
+.contact-form textarea {
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: none;
+}
+
+.contact-form button {
+  background-color: var(--primary-color);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* Social Media Icons */
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-3px);
+}
+
+/* Custom Badge */
+.badge-primary-custom {
+  background-color: var(--primary-lighter);
+  color: var(--primary-dark);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+}
+
+/* Feature Box */
+.feature-box {
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--primary-lighter);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive Images */
+.img-fluid-custom {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Custom Divider */
+.divider {
+  height: 3px;
+  width: 50px;
+  background-color: var(--primary-color);
+  margin: 1.5rem 0;
+}
+
+.divider-center {
+  height: 3px;
+  width: 50px;
+  background-color: var(--primary-color);
+  margin: 1.5rem auto;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.whatsapp-float:hover {
+  background-color: #128c7e;
+  color: white;
+  transform: translateY(0) scale(1.1);
+}
+
+.whatsapp-float.show {
+  opacity: 1;
+  transform: translateY(0);
+}

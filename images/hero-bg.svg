@@ -1,0 +1,50 @@
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#166534" /> <!-- green-800 -->
+      <stop offset="100%" stop-color="#052e16" /> <!-- green-950 -->
+    </linearGradient>
+    <pattern id="pattern-circles" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="2" fill="#22c55e" fill-opacity="0.1" /> <!-- green-500 with opacity -->
+    </pattern>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="1920" height="1080" fill="url(#bg-gradient)" />
+  
+  <!-- Pattern overlay -->
+  <rect width="1920" height="1080" fill="url(#pattern-circles)" />
+  
+  <!-- Abstract shapes -->
+  <circle cx="200" cy="200" r="400" fill="#22c55e" fill-opacity="0.05" /> <!-- green-500 with opacity -->
+  <circle cx="1720" cy="900" r="300" fill="#22c55e" fill-opacity="0.05" /> <!-- green-500 with opacity -->
+  
+  <!-- Cocoa bean illustrations -->
+  <g transform="translate(1600, 300) scale(0.8)" fill="#f59e0b" fill-opacity="0.1"> <!-- amber-500 with opacity -->
+    <path d="M0,0 C50,-30 100,-30 150,0 C200,30 200,100 150,130 C100,160 50,160 0,130 C-50,100 -50,30 0,0 Z" />
+  </g>
+  
+  <g transform="translate(300, 800) scale(0.6)" fill="#f59e0b" fill-opacity="0.1"> <!-- amber-500 with opacity -->
+    <path d="M0,0 C50,-30 100,-30 150,0 C200,30 200,100 150,130 C100,160 50,160 0,130 C-50,100 -50,30 0,0 Z" />
+  </g>
+  
+  <g transform="translate(1200, 600) scale(1.2)" fill="#f59e0b" fill-opacity="0.1"> <!-- amber-500 with opacity -->
+    <path d="M0,0 C50,-30 100,-30 150,0 C200,30 200,100 150,130 C100,160 50,160 0,130 C-50,100 -50,30 0,0 Z" />
+  </g>
+  
+  <!-- Coffee bean illustrations -->
+  <g transform="translate(400, 400) scale(0.7)" fill="#92400e" fill-opacity="0.1"> <!-- amber-800 with opacity -->
+    <path d="M0,0 C40,-50 120,-50 160,0 C200,50 200,150 160,200 C120,250 40,250 0,200 C-40,150 -40,50 0,0 Z" />
+    <path d="M80,100 C80,70 80,30 80,0 C80,-30 80,-70 80,-100" stroke="#92400e" stroke-opacity="0.1" stroke-width="10" fill="none" />
+  </g>
+  
+  <g transform="translate(1500, 800) scale(0.9)" fill="#92400e" fill-opacity="0.1"> <!-- amber-800 with opacity -->
+    <path d="M0,0 C40,-50 120,-50 160,0 C200,50 200,150 160,200 C120,250 40,250 0,200 C-40,150 -40,50 0,0 Z" />
+    <path d="M80,100 C80,70 80,30 80,0 C80,-30 80,-70 80,-100" stroke="#92400e" stroke-opacity="0.1" stroke-width="10" fill="none" />
+  </g>
+  
+  <!-- Decorative lines -->
+  <path d="M0,300 C300,250 600,350 900,300 C1200,250 1500,350 1800,300 L1920,300 L1920,0 L0,0 Z" fill="#22c55e" fill-opacity="0.05" /> <!-- green-500 with opacity -->
+  <path d="M0,800 C300,850 600,750 900,800 C1200,850 1500,750 1800,800 L1920,800 L1920,1080 L0,1080 Z" fill="#22c55e" fill-opacity="0.05" /> <!-- green-500 with opacity -->
+</svg>
