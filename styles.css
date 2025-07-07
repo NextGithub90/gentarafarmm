@@ -685,33 +685,33 @@ footer a:hover {
 /* Our Brands Section Cards Hover Effect */
 [class*="brands"] .bg-white.p-8.rounded-lg.shadow-xl,
 section .bg-white.p-8.rounded-lg.shadow-xl {
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    background: #ffffff;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #ffffff;
 }
 
 [class*="brands"] .bg-white.p-8.rounded-lg.shadow-xl:hover,
 section .bg-white.p-8.rounded-lg.shadow-xl:hover {
-    background: linear-gradient(145deg, #166534, #15803d) !important;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(145deg, #166534, #15803d) !important;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 [class*="brands"] .bg-white.p-8.rounded-lg.shadow-xl:hover .text-green-800,
 section .bg-white.p-8.rounded-lg.shadow-xl:hover .text-green-800 {
-    color: #ffffff !important;
+  color: #ffffff !important;
 }
 
 [class*="brands"] .bg-white.p-8.rounded-lg.shadow-xl:hover .text-gray-700,
 section .bg-white.p-8.rounded-lg.shadow-xl:hover .text-gray-700 {
-    color: #e5e7eb !important;
+  color: #e5e7eb !important;
 }
 
 [class*="brands"] .bg-white.p-8.rounded-lg.shadow-xl:hover .text-green-600,
 section .bg-white.p-8.rounded-lg.shadow-xl:hover .text-green-600 {
-    color: #86efac !important;
+  color: #86efac !important;
 }
 
 [class*="brands"] .bg-white.p-8.rounded-lg.shadow-xl *,
 section .bg-white.p-8.rounded-lg.shadow-xl * {
-    transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
