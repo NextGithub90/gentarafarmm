@@ -1,6 +1,33 @@
 // JavaScript for GreenCocoa Website
 
 document.addEventListener("DOMContentLoaded", function () {
+  // WhatsApp Integration for Contact Form
+  const sendWhatsAppButton = document.getElementById("sendWhatsApp");
+  if (sendWhatsAppButton) {
+    sendWhatsAppButton.addEventListener("click", function () {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const product = document.getElementById("product").value;
+      const message = document.getElementById("message").value.trim();
+
+      // Validate form
+      if (!name || !email || !product || !message) {
+        alert("Mohon lengkapi semua field sebelum mengirim pesan");
+        return;
+      }
+
+      // Format message for WhatsApp
+      const whatsappMessage = `Halo, saya ${name} (${email}) tertarik dengan produk ${product}. \n\nPesan: ${message}`;
+
+      // Create WhatsApp URL with phone number and encoded message
+      // Replace with your actual WhatsApp business number
+      const phoneNumber = "6282218760754"; // Format: country code + number without +
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+      // Open WhatsApp in new tab
+      window.open(whatsappURL, "_blank");
+    });
+  }
   // Mobile Menu Toggle
   const mobileMenuButton = document.getElementById("mobile-menu-button");
   const mobileMenu = document.getElementById("mobile-menu");
